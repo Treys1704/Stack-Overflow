@@ -99,6 +99,12 @@
                                                 <a href="/discussions" class="text-decoration-none">Home</a>
                                             </li>
 
+                                            @auth()
+                                                <li class="list-group-item">
+                                                    <a href="/channels" class="text-decoration-none">Channels Settings</a>
+                                                </li>
+                                            @endauth
+
                                         </ul>
                                     </div>
 

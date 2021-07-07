@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateDiscussionRequest;
 use App\Http\Requests\CreateReplyRequest;
 use App\Models\Discussion;
+use App\Models\Reply;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class RepliesController extends Controller
 {
@@ -93,4 +95,16 @@ class RepliesController extends Controller
     {
         //
     }
+
+    /* public function best_answer($id){
+
+        $reply = Reply::find($id);
+
+        $reply->best_answer = 1;
+        $reply->save();
+
+        Session::flash('success', 'Reply has been mark as best reply');
+        return redirect()->back();
+
+    } */
 }
